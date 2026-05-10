@@ -17,7 +17,9 @@ import { IDiamondCutAbi } from './abi/IDiamondCut';
 import { OwnershipFacetAbi } from './abi/OwnershipFacet';
 import './App.css';
 
-const DEFAULT_DIAMOND = '0x2709eEB245105F701962e9c6CaC5FA610A4D5e6a';
+const DEFAULT_DIAMOND =
+  (import.meta.env.VITE_DEFAULT_DIAMOND as string | undefined) ??
+  '0x14392f8276c6234064395e74f0741e26f1613c1e';
 
 const COMBINED_ABI = [
   ...IClanWorldAbi,
